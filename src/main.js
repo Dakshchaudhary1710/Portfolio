@@ -1,5 +1,5 @@
 import './style.css';
-import heroVisualSvg from './assets/hero-visual.svg';
+import heroPortrait from './assets/hero-portrait.jpg';
 import aboutVisualSvg from './assets/about-visual.svg';
 import loomisScreenshot from './assets/loomis-screenshot.png';
 
@@ -198,7 +198,7 @@ function renderHero() {
           </div>
         </div>
         <div class="hero-visual-wrapper">
-          <img src="${heroVisualSvg}" alt="Editorial visual composition" class="hero-visual-card" />
+          <img src="${heroPortrait}" alt="Daksh Chaudhary" class="hero-portrait-img" />
         </div>
       </div>
     </section>
