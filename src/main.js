@@ -1,7 +1,7 @@
 import './style.css';
 import heroVisualSvg from './assets/hero-visual.svg';
 import aboutVisualSvg from './assets/about-visual.svg';
-import loomisPreviewSvg from './assets/loomis-preview.svg';
+import loomisScreenshot from './assets/loomis-screenshot.png';
 
 /* Data Store */
 const PORTFOLIO_DATA = {
@@ -39,9 +39,9 @@ const PORTFOLIO_DATA = {
       featured: true,
       description: "A student-focused placement preparation platform designed to help candidates prepare for interviews with structured study plans, DSA progress tracking, and mock practice questions.",
       tags: ["React", "Django", "MySQL", "REST APIs"],
-      image: loomisPreviewSvg,
+      image: loomisScreenshot,
       githubUrl: "#",
-      liveUrl: "#"
+      liveUrl: "https://loomis-omega.vercel.app"
     }
   ],
   skills: [
@@ -221,7 +221,7 @@ function renderProjects() {
                 </div>
               </div>
               <div class="project-footer">
-                <a href="${loomis.liveUrl}" class="project-link">
+                <a href="${loomis.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
                   View Project
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>

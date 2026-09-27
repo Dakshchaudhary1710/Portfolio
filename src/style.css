@@ -560,17 +560,23 @@ button, input, textarea {
   width: 100%;
   background-color: var(--bg-secondary);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
 }
 
 .project-image-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(14, 23, 38, 0.08);
   transition: var(--transition);
 }
 
 .project-card:hover .project-image-box img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .project-content {
