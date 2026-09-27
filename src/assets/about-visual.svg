@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF2F5" />
+      <stop offset="100%" stop-color="#DCE5F2" />
+    </linearGradient>
+    <filter id="softShadowAbout" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0E1726" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="500" height="400" rx="16" fill="url(#aboutBg)" stroke="#D9DDE2" stroke-width="1.5" />
+  
+  <!-- Desk Minimalist Visual Frame -->
+  <g transform="translate(60, 40)" filter="url(#softShadowAbout)">
+    <rect width="380" height="320" rx="12" fill="#FFFFFF" stroke="#E2E7ED"/>
+    
+    <!-- Laptop screen -->
+    <rect x="80" y="50" width="220" height="140" rx="8" fill="#172033"/>
+    <!-- Code lines on screen -->
+    <rect x="95" y="70" width="80" height="6" rx="3" fill="#587A9E"/>
+    <rect x="95" y="84" width="120" height="5" rx="2.5" fill="#A8BED5"/>
+    <rect x="110" y="96" width="90" height="5" rx="2.5" fill="#687386"/>
+    <rect x="110" y="108" width="70" height="5" rx="2.5" fill="#587A9E"/>
+    <rect x="95" y="122" width="130" height="5" rx="2.5" fill="#DCE5F2"/>
+    <circle cx="280" cy="70" r="12" fill="#587A9E" opacity="0.3"/>
+    
+    <!-- Laptop base -->
+    <path d="M 60 190 L 320 190 L 335 204 C 335 206 333 208 330 208 L 50 208 C 47 208 45 206 45 204 Z" fill="#94A3B8"/>
+    <rect x="160" y="191" width="60" height="4" rx="2" fill="#64748B"/>
+    
+    <!-- Desk accessories -->
+    <!-- Coffee Mug -->
+    <rect x="340" y="165" width="24" height="32" rx="4" fill="#E2E8F0" stroke="#CBD5E1"/>
+    <path d="M 364 173 C 370 173 370 189 364 189" stroke="#CBD5E1" stroke-width="3" fill="none"/>
+    
+    <!-- Plant / Pot -->
+    <path d="M 25 180 L 35 180 L 33 205 L 27 205 Z" fill="#587A9E"/>
+    <circle cx="30" cy="172" r="10" fill="#10B981" opacity="0.8"/>
+    <circle cx="24" cy="165" r="8" fill="#059669" opacity="0.8"/>
+    <circle cx="36" cy="165" r="8" fill="#34D399" opacity="0.8"/>
+    
+    <!-- Workspace Reflection line -->
+    <line x1="30" y1="240" x2="350" y2="240" stroke="#EEF2F5" stroke-width="2"/>
+    <rect x="130" y="260" width="120" height="8" rx="4" fill="#EEF2F5"/>
+    <rect x="150" y="276" width="80" height="6" rx="3" fill="#F8F5EF"/>
+  </g>
+</svg>
