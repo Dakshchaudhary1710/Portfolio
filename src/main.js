@@ -10,7 +10,7 @@ const PORTFOLIO_DATA = {
     role: "CS Undergraduate at Manipal University Jaipur • Developer",
     university: "Manipal University Jaipur",
     intro: "I am a B.Tech Computer Science & Engineering undergraduate at Manipal University Jaipur. I build practical software applications and explore full-stack development, artificial intelligence, and algorithms.",
-    email: "dakshchaudhary.dev@gmail.com",
+    email: "chaudharydaksh1710@gmail.com",
     location: "Jaipur, India",
     github: "https://github.com",
     linkedin: "https://linkedin.com"
@@ -44,16 +44,87 @@ const PORTFOLIO_DATA = {
       liveUrl: "https://loomis-omega.vercel.app"
     }
   ],
-  skills: [
-    { name: "C++", category: "Languages" },
-    { name: "Java", category: "Languages" },
-    { name: "JavaScript", category: "Languages" },
-    { name: "Python", category: "Languages" },
-    { name: "React", category: "Web & Frameworks" },
-    { name: "Django", category: "Web & Frameworks" },
-    { name: "SQL", category: "Web & Frameworks" },
-    { name: "Git / GitHub", category: "Tools & Core" },
-    { name: "Data Structures & Algorithms", category: "Tools & Core" }
+  skillGroups: [
+    {
+      category: "Languages",
+      items: [
+        {
+          name: "C++",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00599C" d="M12 2L2 7v10l10 5 10-5V7L12 2zm-1 14.5c-2.5 0-4.5-1.8-4.5-4.5s2-4.5 4.5-4.5c1.4 0 2.6.6 3.4 1.6l-1.5 1.2c-.4-.6-1.1-1-1.9-1-1.5 0-2.6 1.2-2.6 2.7s1.1 2.7 2.6 2.7c.8 0 1.5-.4 1.9-1l1.5 1.2c-.8 1-2 1.6-3.4 1.6zm7-3.5h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1zm3 0h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1z"/></svg>`
+        },
+        {
+          name: "Java",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5382A1" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>`
+        },
+        {
+          name: "JavaScript",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><text x="12" y="17" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle" fill="#000">JS</text></svg>`
+        },
+        {
+          name: "Python",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><path fill="#3776AB" d="M11.9 2c-4.8 0-4.5 2.1-4.5 2.1v2.2h4.6v.7H5.6S2 6.5 2 11.3c0 4.8 3.1 4.6 3.1 4.6h1.8v-2.6s-.1-3.1 3.1-3.1h4.4s2.9.1 2.9-2.8V4.8S17.8 2 11.9 2zm-2.4 1.5c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/><path fill="#FFD43B" d="M12.1 22c4.8 0 4.5-2.1 4.5-2.1v-2.2h-4.6v-.7h6.4s3.6.5 3.6-4.3c0-4.8-3.1-4.6-3.1-4.6h-1.8v2.6s.1 3.1-3.1 3.1h-4.4s-2.9-.1-2.9 2.8v2.6s-.4 2.8 5.4 2.8zm2.4-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg>`
+        }
+      ]
+    },
+    {
+      category: "Frontend",
+      items: [
+        {
+          name: "HTML",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><path fill="#E34F26" d="M1.5 0h21l-1.9 21.5L12 24l-8.6-2.5L1.5 0z"/><path fill="#EF652A" d="M12 22l7.1-2 1.6-18H12v20z"/><path fill="#FFF" d="M12 9.6H7.9l-.3-3.2H12V3.6H4.8l.1 1.2.8 9.6H12V9.6zm0 7.4l-4.2-1.1-.3-3.1H4.6l.5 6.2L12 20.9v-3.9z"/></svg>`
+        },
+        {
+          name: "CSS",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><path fill="#1572B6" d="M1.5 0h21l-1.9 21.5L12 24l-8.6-2.5L1.5 0z"/><path fill="#33A9DC" d="M12 22l7.1-2 1.6-18H12v20z"/><path fill="#FFF" d="M12 9.6H8l-.2-2.4H12V4.8H5.2l.6 7.2H12V9.6zm0 7.4l-3.8-1-.2-2.6H5.5l.5 5.8 6 1.7v-3.9z"/></svg>`
+        },
+        {
+          name: "React",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/></svg>`
+        }
+      ]
+    },
+    {
+      category: "Backend & Database",
+      items: [
+        {
+          name: "Django",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22"><rect width="24" height="24" rx="4" fill="#092E20"/><text x="12" y="17" font-size="14" font-family="serif" font-weight="bold" text-anchor="middle" fill="#44B78B">d</text></svg>`
+        },
+        {
+          name: "MySQL",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00618A" stroke-width="2"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3v12c0 1.7-3.6 3-8 3s-8-1.3-8-3V6z"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/><text x="12" y="15" font-size="6" font-weight="bold" fill="#00618A" text-anchor="middle" stroke="none">SQL</text></svg>`
+        },
+        {
+          name: "SQL",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#587A9E" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`
+        }
+      ]
+    },
+    {
+      category: "Core",
+      items: [
+        {
+          name: "Data Structures & Algorithms",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="12" y1="8" x2="6" y2="15"/><line x1="12" y1="8" x2="18" y2="15"/></svg>`
+        },
+        {
+          name: "Object-Oriented Programming",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"/><line x1="12" y1="14" x2="12" y2="12"/></svg>`
+        },
+        {
+          name: "DBMS",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="3" y="3" width="18" height="6" rx="2"/><rect x="3" y="15" width="18" height="6" rx="2"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="7" y1="18" x2="7.01" y2="18"/><line x1="12" y1="9" x2="12" y2="15"/></svg>`
+        },
+        {
+          name: "Operating Systems",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="16" y2="14"/></svg>`
+        },
+        {
+          name: "Computer Networks",
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg>`
+        }
+      ]
+    }
   ]
 };
 
@@ -178,15 +249,20 @@ function renderSkills() {
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">My Skills</h2>
-          <p class="section-subtitle">Core programming languages, web technologies, and software tools.</p>
+          <p class="section-subtitle">Core programming languages, web technologies, and computer science fundamentals.</p>
         </div>
-        <div class="skills-badge-grid">
-          ${PORTFOLIO_DATA.skills.map(skill => `
-            <div class="skill-badge-card">
-              <div class="skill-badge-icon">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <div class="skills-groups-wrapper">
+          ${PORTFOLIO_DATA.skillGroups.map(group => `
+            <div class="skill-group-card">
+              <h3 class="skill-group-title">${group.category}</h3>
+              <div class="skill-items-container">
+                ${group.items.map(item => `
+                  <div class="skill-item-badge">
+                    <div class="skill-item-icon">${item.icon}</div>
+                    <span class="skill-item-name">${item.name}</span>
+                  </div>
+                `).join('')}
               </div>
-              <span class="skill-badge-name">${skill.name}</span>
             </div>
           `).join('')}
         </div>
@@ -319,8 +395,8 @@ function renderContact() {
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
-                  <div class="contact-info-label">University / Location</div>
-                  <div class="contact-info-value">${PORTFOLIO_DATA.personal.university}</div>
+                  <div class="contact-info-label">Location</div>
+                  <div class="contact-info-value">${PORTFOLIO_DATA.personal.location}</div>
                 </div>
               </div>
             </div>

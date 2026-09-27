@@ -488,45 +488,72 @@ button, input, textarea {
   background-color: var(--bg-secondary);
 }
 
-.skills-badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.2rem;
+.skills-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.skill-badge-card {
+.skill-group-card {
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  border-radius: 16px;
+  padding: 2rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
-.skill-badge-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-accent);
+.skill-group-card:hover {
   box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
 }
 
-.skill-badge-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+.skill-group-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.skill-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.skill-item-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1.2rem;
   background-color: var(--bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  transition: var(--transition);
+  box-shadow: 0 1px 4px rgba(14, 23, 38, 0.03);
+}
+
+.skill-item-badge:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-navy);
-}
-
-.skill-badge-name {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-navy);
+  width: 24px;
+  height: 24px;
 }
 
 /* ==========================================================================
