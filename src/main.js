@@ -2,124 +2,58 @@ import './style.css';
 import heroVisualSvg from './assets/hero-visual.svg';
 import aboutVisualSvg from './assets/about-visual.svg';
 import loomisPreviewSvg from './assets/loomis-preview.svg';
-import railnexusPreviewSvg from './assets/railnexus-preview.svg';
-import jalturnPreviewSvg from './assets/jalturn-preview.svg';
-import taskflowPreviewSvg from './assets/taskflow-preview.svg';
 
 /* Data Store */
 const PORTFOLIO_DATA = {
   personal: {
     name: "Daksh Chaudhary",
-    role: "Full-Stack Developer • Problem Solver • CS Student",
-    intro: "I build web applications that are clean, useful, and make an impact. Currently exploring modern web technologies, Data Structures & Algorithms, and building product-driven software with purpose.",
+    role: "CS Undergraduate at Manipal University Jaipur • Developer",
+    university: "Manipal University Jaipur",
+    intro: "I am a B.Tech Computer Science & Engineering undergraduate at Manipal University Jaipur. I build practical software applications and explore full-stack development, artificial intelligence, and algorithms.",
     email: "dakshchaudhary.dev@gmail.com",
-    location: "India",
+    location: "Jaipur, India",
     github: "https://github.com",
     linkedin: "https://linkedin.com"
   },
-  stats: [
-    { number: "1+", label: "Years of Experience" },
-    { number: "10+", label: "Projects Completed" },
-    { number: "5+", label: "Technologies Mastered" },
-    { number: "100%", label: "Dedication to Craft" }
+  interests: [
+    "Full-Stack Development",
+    "Artificial Intelligence",
+    "Data Structures & Algorithms",
+    "Building Practical Software Applications"
   ],
+  education: {
+    degree: "B.Tech — Computer Science & Engineering",
+    institution: "Manipal University Jaipur",
+    years: "2025–2029",
+    details: "Focusing on core computer science foundations, Data Structures & Algorithms, Object-Oriented Software Design, Web Technologies, and AI concepts."
+  },
+  currentlyLearning: {
+    statement: "Currently exploring Artificial Intelligence, Machine Learning, and Generative AI.",
+    topics: ["Artificial Intelligence", "Machine Learning", "Generative AI"]
+  },
   projects: [
     {
       id: "loomis",
       title: "Loomis — Student Job Prep Platform",
       category: "Full Stack",
       featured: true,
-      description: "A student-focused platform designed to prepare candidates for placements with AI-assisted mock tools, structured study plans, DSA progress tracking, and practice questions.",
+      description: "A student-focused placement preparation platform designed to help candidates prepare for interviews with structured study plans, DSA progress tracking, and mock practice questions.",
       tags: ["React", "Django", "MySQL", "REST APIs"],
       image: loomisPreviewSvg,
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: "sih-railnexus",
-      title: "SIH Rail-Nexus",
-      category: "AI / Tools",
-      featured: false,
-      description: "Smart India Hackathon railway optimization system featuring real-time train tracking, AI track scheduling, and automated delay reduction analytics.",
-      tags: ["React", "Python", "Django", "Analytics"],
-      image: railnexusPreviewSvg,
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: "jalturn",
-      title: "JalTurn — Water Telemetry",
-      category: "Web Apps",
-      featured: false,
-      description: "Smart water recycling & telemetry platform that monitors IoT flow metrics, daily consumption trends, and water conservation statistics.",
-      tags: ["React", "Node.js", "MongoDB", "IoT"],
-      image: jalturnPreviewSvg,
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: "taskflow",
-      title: "TaskFlow Workspace",
-      category: "Full Stack",
-      featured: false,
-      description: "Real-time task management and Kanban board workspace supporting team collaboration, project status tracking, and automated workflow triggers.",
-      tags: ["React", "Express", "MongoDB", "WebSockets"],
-      image: taskflowPreviewSvg,
       githubUrl: "#",
       liveUrl: "#"
     }
   ],
   skills: [
-    {
-      category: "Frontend",
-      icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-      items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"]
-    },
-    {
-      category: "Backend",
-      icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>`,
-      items: ["Django", "Node.js", "Express", "REST APIs"]
-    },
-    {
-      category: "Languages",
-      icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-      items: ["C++", "Java", "Python", "JavaScript"]
-    },
-    {
-      category: "Database & Tools",
-      icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`,
-      items: ["MySQL", "MongoDB", "Git", "GitHub", "VS Code", "Docker"]
-    }
-  ],
-  experience: [
-    {
-      date: "2024 — Present",
-      role: "Full-Stack Project Lead & Developer",
-      organization: "Personal & Academic Projects",
-      details: [
-        "Architected Loomis student job-readiness platform using React, Django, and MySQL.",
-        "Engineered RESTful API services and state management routines for seamless user workflows.",
-        "Implemented clean editorial UI/UX components with strict responsive design standards."
-      ]
-    },
-    {
-      date: "2024",
-      role: "Smart India Hackathon Participant (SIH Rail-Nexus)",
-      organization: "Ministry of Railways Problem Statement",
-      details: [
-        "Developed Rail-Nexus railway scheduling analytics system aimed at reducing corridor delay.",
-        "Collaborated on track throughput optimization models using Python algorithms & React UI."
-      ]
-    },
-    {
-      date: "2023 — Present",
-      role: "B.Tech in Computer Science & Engineering",
-      organization: "University Academic Program",
-      details: [
-        "Strong foundation in Data Structures, Object-Oriented Programming (C++/Java), and Web Systems.",
-        "Consistently solved complex algorithmic challenges and built production-ready applications."
-      ]
-    }
+    { name: "C++", category: "Languages" },
+    { name: "Java", category: "Languages" },
+    { name: "JavaScript", category: "Languages" },
+    { name: "Python", category: "Languages" },
+    { name: "React", category: "Web & Frameworks" },
+    { name: "Django", category: "Web & Frameworks" },
+    { name: "SQL", category: "Web & Frameworks" },
+    { name: "Git / GitHub", category: "Tools & Core" },
+    { name: "Data Structures & Algorithms", category: "Tools & Core" }
   ]
 };
 
@@ -134,9 +68,10 @@ function renderNavbar() {
         <ul class="nav-links">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#learning" class="nav-link">Currently Learning</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <a href="#contact" class="btn-nav">Get in touch</a>
@@ -150,9 +85,10 @@ function renderNavbar() {
     <div class="mobile-drawer" id="mobile-drawer">
       <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
       <a href="#skills" class="nav-link">Skills</a>
-      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#learning" class="nav-link">Currently Learning</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#contact" class="btn-primary" style="text-align: center;">Get in touch</a>
     </div>
@@ -178,36 +114,15 @@ function renderHero() {
             <a href="#contact" class="btn-secondary">Contact Me</a>
           </div>
           <div class="hero-tech-strip">
-            <p class="tech-strip-label">Technologies & Frameworks</p>
+            <p class="tech-strip-label">Core Technologies</p>
             <div class="tech-strip-icons">
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(30 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(90 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(150 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-                React
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                JavaScript
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
-                Python
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                Java
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-                C++
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h10v10H7z"/></svg>
-                Django
-              </div>
-              <div class="tech-icon-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                MySQL
-              </div>
+              <div class="tech-icon-item">React</div>
+              <div class="tech-icon-item">JavaScript</div>
+              <div class="tech-icon-item">Python</div>
+              <div class="tech-icon-item">C++</div>
+              <div class="tech-icon-item">Java</div>
+              <div class="tech-icon-item">Django</div>
+              <div class="tech-icon-item">SQL</div>
             </div>
           </div>
         </div>
@@ -226,49 +141,52 @@ function renderAbout() {
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Turning ideas into real-world solutions through software.</p>
+          <p class="section-subtitle">B.Tech Computer Science & Engineering Student at Manipal University Jaipur.</p>
         </div>
         <div class="about-grid">
           <div class="about-left">
             <p class="about-text">
-              I am a Full-Stack Developer with a passion for building scalable web applications and solving complex problems through clean code. I enjoy learning new technologies, working on challenging projects, and continuously refining my software engineering craft.
+              I am a Computer Science undergraduate student at <strong>Manipal University Jaipur</strong> (2025–2029). I focus on building real, practical software applications while developing a strong foundation in core computer science principles and artificial intelligence.
             </p>
-            <div class="about-highlights">
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <p class="about-text" style="margin-top: 1rem;">
+              My key areas of interest include:
+            </p>
+            <div class="about-highlights" style="margin-top: 1.2rem;">
+              ${PORTFOLIO_DATA.interests.map(interest => `
+                <div class="highlight-card">
+                  <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span>${interest}</span>
                 </div>
-                <span>Web Development</span>
-              </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                </div>
-                <span>Problem Solving</span>
-              </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                </div>
-                <span>Continuous Learning</span>
-              </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <span>Team Collaboration</span>
-              </div>
+              `).join('')}
             </div>
           </div>
           <div class="about-right">
             <img src="${aboutVisualSvg}" alt="Workspace setup" style="border-radius: 14px; width: 100%; border: 1px solid var(--color-border);" />
           </div>
         </div>
-        <div class="stats-strip">
-          ${PORTFOLIO_DATA.stats.map(stat => `
-            <div class="stat-item">
-              <div class="stat-number">${stat.number}</div>
-              <div class="stat-label">${stat.label}</div>
+      </div>
+    </section>
+  `;
+}
+
+/* Render Skills Section */
+function renderSkills() {
+  return `
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">My Skills</h2>
+          <p class="section-subtitle">Core programming languages, web technologies, and software tools.</p>
+        </div>
+        <div class="skills-badge-grid">
+          ${PORTFOLIO_DATA.skills.map(skill => `
+            <div class="skill-badge-card">
+              <div class="skill-badge-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="skill-badge-name">${skill.name}</span>
             </div>
           `).join('')}
         </div>
@@ -279,116 +197,96 @@ function renderAbout() {
 
 /* Render Projects Section */
 function renderProjects() {
+  const loomis = PORTFOLIO_DATA.projects[0];
   return `
     <section id="projects" class="projects-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Selected Projects</h2>
-          <p class="section-subtitle">Some of the software projects and products I've built so far.</p>
-        </div>
-        
-        <div class="projects-filter">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
-          <button class="filter-btn" data-filter="Web Apps">Web Apps</button>
-          <button class="filter-btn" data-filter="AI / Tools">AI / Tools</button>
+          <h2 class="section-title">Featured Project</h2>
+          <p class="section-subtitle">A practical software project designed and built for real-world placement preparation.</p>
         </div>
 
-        <div class="projects-grid" id="projects-grid">
-          ${renderProjectCards('all')}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-/* Helper to render individual project cards */
-function renderProjectCards(filterCategory) {
-  const filtered = filterCategory === 'all' 
-    ? PORTFOLIO_DATA.projects 
-    : PORTFOLIO_DATA.projects.filter(p => p.category === filterCategory);
-
-  return filtered.map(p => `
-    <div class="project-card ${p.featured ? 'featured' : ''}" data-category="${p.category}">
-      <div class="project-image-box">
-        <img src="${p.image}" alt="${p.title}" />
-      </div>
-      <div class="project-content">
-        <div>
-          ${p.featured ? `<span class="featured-badge">Featured Project</span>` : ''}
-          <h3 class="project-title">${p.title}</h3>
-          <p class="project-description">${p.description}</p>
-          <div class="project-tags">
-            ${p.tags.map(t => `<span class="badge-tag">${t}</span>`).join('')}
-          </div>
-        </div>
-        <div class="project-footer">
-          <a href="${p.liveUrl}" class="project-link">
-            View Details 
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-/* Render Skills Section */
-function renderSkills() {
-  return `
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">My Skills</h2>
-          <p class="section-subtitle">Core technologies, frameworks, and engineering tools I work with.</p>
-        </div>
-        <div class="skills-grid">
-          ${PORTFOLIO_DATA.skills.map(cat => `
-            <div class="skill-category-card">
-              <div class="category-header">
-                <div class="category-icon">${cat.icon}</div>
-                <h3 class="category-title">${cat.category}</h3>
-              </div>
-              <div class="skill-items-grid">
-                ${cat.items.map(item => `
-                  <div class="skill-item">
-                    <span class="skill-name">${item}</span>
-                  </div>
-                `).join('')}
-              </div>
+        <div class="projects-featured-container">
+          <div class="project-card featured" style="grid-column: auto;">
+            <div class="project-image-box">
+              <img src="${loomis.image}" alt="${loomis.title}" />
             </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-/* Render Experience Timeline Section */
-function renderExperience() {
-  return `
-    <section id="experience" class="experience-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Experience & Journey</h2>
-          <p class="section-subtitle">My educational milestones, software projects, and learning journey.</p>
-        </div>
-        <div class="timeline">
-          ${PORTFOLIO_DATA.experience.map(exp => `
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-date">${exp.date}</div>
-                <h3 class="timeline-role">${exp.role}</h3>
-                <div class="timeline-org">${exp.organization}</div>
-                <div class="timeline-details">
-                  <ul>
-                    ${exp.details.map(d => `<li>${d}</li>`).join('')}
-                  </ul>
+            <div class="project-content">
+              <div>
+                <span class="featured-badge">Primary Project</span>
+                <h3 class="project-title">${loomis.title}</h3>
+                <p class="project-description">${loomis.description}</p>
+                <div class="project-tags">
+                  ${loomis.tags.map(t => `<span class="badge-tag">${t}</span>`).join('')}
                 </div>
               </div>
+              <div class="project-footer">
+                <a href="${loomis.liveUrl}" class="project-link">
+                  View Project
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
             </div>
-          `).join('')}
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* Render Education Section */
+function renderEducation() {
+  const edu = PORTFOLIO_DATA.education;
+  return `
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic program and university background.</p>
+        </div>
+        <div class="education-card">
+          <div class="education-header">
+            <div>
+              <span class="education-years">${edu.years}</span>
+              <h3 class="education-degree">${edu.degree}</h3>
+              <div class="education-institution">${edu.institution}</div>
+            </div>
+            <div class="education-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+          </div>
+          <p class="education-details">${edu.details}</p>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* Render Currently Learning Section */
+function renderCurrentlyLearning() {
+  const learning = PORTFOLIO_DATA.currentlyLearning;
+  return `
+    <section id="learning" class="learning-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Currently Learning</h2>
+          <p class="section-subtitle">Areas of study and technology I am currently exploring.</p>
+        </div>
+        <div class="learning-card">
+          <div class="learning-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <h3 class="learning-statement font-serif">
+            "${learning.statement}"
+          </h3>
+          <div class="learning-topics">
+            ${learning.topics.map(t => `
+              <span class="badge-tag" style="background-color: var(--color-white); border-color: var(--color-border); font-size: 0.85rem; padding: 0.4rem 0.9rem;">
+                <span style="width: 6px; height: 6px; background-color: var(--color-accent); border-radius: 50%; display: inline-block;"></span>
+                ${t}
+              </span>
+            `).join('')}
+          </div>
         </div>
       </div>
     </section>
@@ -402,9 +300,9 @@ function renderContact() {
       <div class="container">
         <div class="contact-grid">
           <div class="contact-left">
-            <h2 class="section-title">Let's Work Together</h2>
+            <h2 class="section-title">Let's Connect</h2>
             <p class="section-subtitle">
-              I'm always open to discussing new opportunities, project collaborations, software engineering roles, or just a friendly tech conversation.
+              Feel free to reach out regarding software projects, academic discussions, or tech collaborations.
             </p>
             <div class="contact-info-list">
               <div class="contact-info-item">
@@ -421,8 +319,8 @@ function renderContact() {
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
-                  <div class="contact-info-label">Location</div>
-                  <div class="contact-info-value">${PORTFOLIO_DATA.personal.location}</div>
+                  <div class="contact-info-label">University / Location</div>
+                  <div class="contact-info-value">${PORTFOLIO_DATA.personal.university}</div>
                 </div>
               </div>
             </div>
@@ -452,7 +350,7 @@ function renderContact() {
         </div>
       </div>
       
-      <!-- Wave transition to deep navy footer -->
+      <!-- Wave transition -->
       <div class="wave-transition">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#172033"/>
@@ -470,7 +368,7 @@ function renderFooter() {
         <div class="footer-grid">
           <div>
             <div class="footer-brand">${PORTFOLIO_DATA.personal.name}</div>
-            <div class="footer-tagline">Build • Learn • Grow</div>
+            <div class="footer-tagline">Manipal University Jaipur • B.Tech Computer Science</div>
           </div>
           <div class="footer-socials">
             <a href="${PORTFOLIO_DATA.personal.github}" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub">
@@ -486,7 +384,7 @@ function renderFooter() {
         </div>
         <div class="footer-bottom">
           <div>&copy; ${new Date().getFullYear()} ${PORTFOLIO_DATA.personal.name}. All rights reserved.</div>
-          <div>Designed with editorial precision.</div>
+          <div>Undergraduate Developer Portfolio</div>
         </div>
       </div>
     </footer>
@@ -505,9 +403,10 @@ function initApp() {
     <main>
       ${renderHero()}
       ${renderAbout()}
-      ${renderProjects()}
       ${renderSkills()}
-      ${renderExperience()}
+      ${renderProjects()}
+      ${renderEducation()}
+      ${renderCurrentlyLearning()}
       ${renderContact()}
     </main>
     ${renderFooter()}
@@ -532,21 +431,6 @@ function attachEventListeners() {
       });
     });
   }
-
-  // Projects filtering
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectsGrid = document.querySelector('#projects-grid');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.getAttribute('data-filter');
-      if (projectsGrid) {
-        projectsGrid.innerHTML = renderProjectCards(cat);
-      }
-    });
-  });
 
   // Contact form submission
   const contactForm = document.querySelector('#contact-form');
