@@ -7,7 +7,7 @@ import loomisScreenshot from './assets/loomis-screenshot.png';
 const PORTFOLIO_DATA = {
   personal: {
     name: "Daksh Chaudhary",
-    role: "CS Undergraduate at Manipal University Jaipur • Developer",
+    role: "Full-Stack Developer",
     university: "Manipal University Jaipur",
     intro: "I am a B.Tech Computer Science & Engineering undergraduate at Manipal University Jaipur. I build practical software applications and explore full-stack development, artificial intelligence, and algorithms.",
     email: "chaudharydaksh1710@gmail.com",
@@ -173,10 +173,11 @@ function renderHero() {
       <div class="hero-bg-glow"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="hero-greeting">Hi, I'm</p>
           <h1 class="hero-title">${PORTFOLIO_DATA.personal.name}</h1>
           <p class="hero-subtitle">${PORTFOLIO_DATA.personal.role}</p>
-          <p class="hero-description">${PORTFOLIO_DATA.personal.intro}</p>
+          <div class="hero-tagline-box">
+            <h2 class="hero-tagline">Ideas are better when they work.</h2>
+          </div>
           <div class="hero-actions">
             <a href="#projects" class="btn-primary">
               View Projects
@@ -210,31 +211,17 @@ function renderAbout() {
   return `
     <section id="about" class="about-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" style="margin-bottom: 0.8rem;">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">B.Tech Computer Science & Engineering Student at Manipal University Jaipur.</p>
         </div>
         <div class="about-grid">
           <div class="about-left">
             <p class="about-text">
-              I am a Computer Science undergraduate student at <strong>Manipal University Jaipur</strong> (2025–2029). I focus on building real, practical software applications while developing a strong foundation in core computer science principles and artificial intelligence.
+              I like building things, solving problems, and learning how different technologies work together. I’m mainly focused on full-stack development and DSA with C++, and I’m currently exploring AI, machine learning, and generative AI. I enjoy taking an idea and turning it into something that actually works, while learning something new along the way.
             </p>
-            <p class="about-text" style="margin-top: 1rem;">
-              My key areas of interest include:
-            </p>
-            <div class="about-highlights" style="margin-top: 1.2rem;">
-              ${PORTFOLIO_DATA.interests.map(interest => `
-                <div class="highlight-card">
-                  <div class="highlight-icon">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <span>${interest}</span>
-                </div>
-              `).join('')}
-            </div>
           </div>
           <div class="about-right">
-            <img src="${aboutVisualSvg}" alt="Workspace setup" style="border-radius: 14px; width: 100%; border: 1px solid var(--color-border);" />
+            <img src="${aboutVisualSvg}" alt="Software Developer Workspace — Full-Stack & AI Exploration" />
           </div>
         </div>
       </div>
@@ -482,7 +469,7 @@ function initApp() {
       ${renderSkills()}
       ${renderProjects()}
       ${renderEducation()}
-      ${renderCurrentlyLearning()}
+
       ${renderContact()}
     </main>
     ${renderFooter()}
