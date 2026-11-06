@@ -96,7 +96,7 @@ const PORTFOLIO_DATA = {
         },
         {
           name: "SQL",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#587A9E" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`
         }
       ]
     },
@@ -105,23 +105,23 @@ const PORTFOLIO_DATA = {
       items: [
         {
           name: "Data Structures & Algorithms",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="12" y1="8" x2="6" y2="15"/><line x1="12" y1="8" x2="18" y2="15"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="12" y1="8" x2="6" y2="15"/><line x1="12" y1="8" x2="18" y2="15"/></svg>`
         },
         {
           name: "Object-Oriented Programming",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"/><line x1="12" y1="14" x2="12" y2="12"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"/><line x1="12" y1="14" x2="12" y2="12"/></svg>`
         },
         {
           name: "DBMS",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="3" y="3" width="18" height="6" rx="2"/><rect x="3" y="15" width="18" height="6" rx="2"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="7" y1="18" x2="7.01" y2="18"/><line x1="12" y1="9" x2="12" y2="15"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="6" rx="2"/><rect x="3" y="15" width="18" height="6" rx="2"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="7" y1="18" x2="7.01" y2="18"/><line x1="12" y1="9" x2="12" y2="15"/></svg>`
         },
         {
           name: "Operating Systems",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="16" y2="14"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="16" y2="14"/></svg>`
         },
         {
           name: "Computer Networks",
-          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#172033" stroke-width="2"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg>`
+          icon: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg>`
         }
       ]
     }
@@ -421,7 +421,7 @@ function renderContact() {
       <!-- Wave transition -->
       <div class="wave-transition">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#172033"/>
+          <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#060607"/>
         </svg>
       </div>
     </section>

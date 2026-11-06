@@ -1,84 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380" width="100%" height="100%">
   <defs>
     <linearGradient id="deskBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F8F5EF" />
-      <stop offset="50%" stop-color="#EEF2F5" />
-      <stop offset="100%" stop-color="#DCE5F2" />
+      <stop offset="0%" stop-color="#0E0E12" />
+      <stop offset="50%" stop-color="#141418" />
+      <stop offset="100%" stop-color="#202020" />
     </linearGradient>
     <linearGradient id="laptopScreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0E1726" />
-      <stop offset="100%" stop-color="#172033" />
+      <stop offset="0%" stop-color="#060607" />
+      <stop offset="100%" stop-color="#141418" />
     </linearGradient>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0E1726" flood-opacity="0.08" />
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4" />
     </filter>
   </defs>
 
   <!-- Container Base -->
-  <rect width="540" height="380" rx="16" fill="url(#deskBg)" stroke="#D9DDE2" stroke-width="1.5" />
+  <rect width="540" height="380" rx="16" fill="url(#deskBg)" stroke="#272730" stroke-width="1.5" />
 
   <!-- Developer Workspace Composition -->
   <g transform="translate(45, 35)" filter="url(#cardShadow)">
-    <rect width="450" height="310" rx="12" fill="#FFFFFF" stroke="#E2E7ED" stroke-width="1" />
+    <rect width="450" height="310" rx="12" fill="#141418" stroke="#25252E" stroke-width="1" />
 
     <!-- Desk Surface Line -->
-    <line x1="20" y1="260" x2="430" y2="260" stroke="#EEF2F5" stroke-width="3" />
+    <line x1="20" y1="260" x2="430" y2="260" stroke="#202026" stroke-width="3" />
 
     <!-- Laptop Monitor Frame -->
-    <rect x="110" y="35" width="230" height="155" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5" />
+    <rect x="110" y="35" width="230" height="155" rx="8" fill="#0B0B0E" stroke="#332C5E" stroke-width="1.5" />
     <rect x="115" y="40" width="220" height="145" rx="5" fill="url(#laptopScreenGrad)" />
 
     <!-- Code Editor Window Header -->
-    <rect x="115" y="40" width="220" height="18" fill="#0E1726" />
+    <rect x="115" y="40" width="220" height="18" fill="#060607" />
     <circle cx="125" cy="49" r="3" fill="#EF4444" />
     <circle cx="134" cy="49" r="3" fill="#F59E0B" />
     <circle cx="143" cy="49" r="3" fill="#10B981" />
-    <text x="155" y="52" font-family="sans-serif" font-size="8" fill="#687386">main.cpp • app.py (Full-Stack &amp; AI)</text>
+    <text x="155" y="52" font-family="sans-serif" font-size="8" fill="#9E9EA7">main.cpp • app.py (Full-Stack &amp; AI)</text>
 
     <!-- Code Lines Mockup on Laptop Screen -->
     <!-- Left Editor Pane -->
-    <text x="122" y="68" font-family="monospace" font-size="7.5" fill="#587A9E">#include &lt;iostream&gt;</text>
-    <text x="122" y="78" font-family="monospace" font-size="7.5" fill="#A8BED5">#include &lt;vector&gt;</text>
-    <text x="122" y="90" font-family="monospace" font-size="7.5" fill="#38BDF8">class GraphEngine {</text>
-    <text x="130" y="100" font-family="monospace" font-size="7" fill="#94A3B8">public:</text>
-    <text x="138" y="110" font-family="monospace" font-size="7" fill="#F8F5EF">void optimizeRoute() {</text>
-    <text x="146" y="120" font-family="monospace" font-size="7" fill="#10B981">// Full-Stack &amp; DSA logic</text>
-    <text x="146" y="130" font-family="monospace" font-size="7" fill="#F59E0B">auto model = loadAI();</text>
-    <text x="146" y="140" font-family="monospace" font-size="7" fill="#A8BED5">model.predict(input);</text>
-    <text x="138" y="150" font-family="monospace" font-size="7" fill="#F8F5EF">}</text>
-    <text x="122" y="160" font-family="monospace" font-size="7.5" fill="#38BDF8">};</text>
+    <text x="122" y="68" font-family="monospace" font-size="7.5" fill="#DFB8AC">#include &lt;iostream&gt;</text>
+    <text x="122" y="78" font-family="monospace" font-size="7.5" fill="#DFB8AC">#include &lt;vector&gt;</text>
+    <text x="122" y="90" font-family="monospace" font-size="7.5" fill="#DFB8AC">class GraphEngine {</text>
+    <text x="130" y="100" font-family="monospace" font-size="7" fill="#9E9EA7">public:</text>
+    <text x="138" y="110" font-family="monospace" font-size="7" fill="#FFFFFF">void optimizeRoute() {</text>
+    <text x="146" y="120" font-family="monospace" font-size="7" fill="#71717A">// Full-Stack &amp; DSA logic</text>
+    <text x="146" y="130" font-family="monospace" font-size="7" fill="#DFB8AC">auto model = loadAI();</text>
+    <text x="146" y="140" font-family="monospace" font-size="7" fill="#D4D4D8">model.predict(input);</text>
+    <text x="138" y="150" font-family="monospace" font-size="7" fill="#FFFFFF">}</text>
+    <text x="122" y="160" font-family="monospace" font-size="7.5" fill="#DFB8AC">};</text>
 
     <!-- Mini Terminal output pane on bottom of laptop screen -->
-    <rect x="115" y="166" width="220" height="19" fill="#0A0F1D" />
-    <text x="122" y="178" font-family="monospace" font-size="7" fill="#10B981">&gt; build success • AI model ready (0.04s)</text>
+    <rect x="115" y="166" width="220" height="19" fill="#09090C" />
+    <text x="122" y="178" font-family="monospace" font-size="7" fill="#DFB8AC">&gt; build success • AI model ready (0.04s)</text>
 
     <!-- Laptop Base & Keyboard -->
-    <path d="M 85 190 L 365 190 L 380 206 C 380 208 378 210 375 210 L 75 210 C 72 210 70 208 70 206 Z" fill="#94A3B8" />
-    <rect x="180" y="192" width="90" height="4" rx="2" fill="#64748B" />
+    <path d="M 85 190 L 365 190 L 380 206 C 380 208 378 210 375 210 L 75 210 C 72 210 70 208 70 206 Z" fill="#202026" />
+    <rect x="180" y="192" width="90" height="4" rx="2" fill="#2D2D38" />
 
     <!-- Desk Elements -->
     <!-- Minimalist Coffee Cup -->
-    <rect x="390" y="172" width="26" height="34" rx="5" fill="#F8F5EF" stroke="#CBD5E1" stroke-width="1.5" />
-    <path d="M 416 180 C 423 180 423 198 416 198" stroke="#CBD5E1" stroke-width="2.5" fill="none" />
-    <path d="M 397 167 C 397 164, 403 164, 403 161" stroke="#94A3B8" stroke-width="1.5" fill="none" stroke-linecap="round" />
+    <rect x="390" y="172" width="26" height="34" rx="5" fill="#1C1C22" stroke="#332C5E" stroke-width="1.5" />
+    <path d="M 416 180 C 423 180 423 198 416 198" stroke="#332C5E" stroke-width="2.5" fill="none" />
+    <path d="M 397 167 C 397 164, 403 164, 403 161" stroke="#DFB8AC" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6" />
 
     <!-- Open Developer Notebook -->
-    <rect x="25" y="195" width="45" height="55" rx="3" fill="#F8F5EF" stroke="#CBD5E1" stroke-width="1.5" />
-    <line x1="47" y1="195" x2="47" y2="250" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="2 2" />
+    <rect x="25" y="195" width="45" height="55" rx="3" fill="#181820" stroke="#2B2B36" stroke-width="1.5" />
+    <line x1="47" y1="195" x2="47" y2="250" stroke="#2B2B36" stroke-width="1.5" stroke-dasharray="2 2" />
     <!-- Notebook notes lines -->
-    <line x1="30" y1="205" x2="42" y2="205" stroke="#587A9E" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="30" y1="213" x2="40" y2="213" stroke="#94A3B8" stroke-width="1" stroke-linecap="round" />
-    <line x1="30" y1="221" x2="43" y2="221" stroke="#94A3B8" stroke-width="1" stroke-linecap="round" />
-    <line x1="52" y1="205" x2="65" y2="205" stroke="#94A3B8" stroke-width="1" stroke-linecap="round" />
-    <line x1="52" y1="213" x2="62" y2="213" stroke="#587A9E" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="30" y1="205" x2="42" y2="205" stroke="#DFB8AC" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="30" y1="213" x2="40" y2="213" stroke="#71717A" stroke-width="1" stroke-linecap="round" />
+    <line x1="30" y1="221" x2="43" y2="221" stroke="#71717A" stroke-width="1" stroke-linecap="round" />
+    <line x1="52" y1="205" x2="65" y2="205" stroke="#71717A" stroke-width="1" stroke-linecap="round" />
+    <line x1="52" y1="213" x2="62" y2="213" stroke="#DFB8AC" stroke-width="1.5" stroke-linecap="round" />
 
     <!-- Minimalist Desk Lamp / Soft Accent -->
-    <path d="M 30 110 L 50 70 L 80 70" fill="none" stroke="#587A9E" stroke-width="2.5" stroke-linecap="round" />
-    <path d="M 75 65 L 95 75 L 85 85 Z" fill="#587A9E" />
-    <circle cx="30" cy="110" r="5" fill="#172033" />
-    <polygon points="88,77 140,140 100,140" fill="#DCE5F2" opacity="0.25" />
+    <path d="M 30 110 L 50 70 L 80 70" fill="none" stroke="#332C5E" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 75 65 L 95 75 L 85 85 Z" fill="#332C5E" />
+    <circle cx="30" cy="110" r="5" fill="#DFB8AC" />
+    <polygon points="88,77 140,140 100,140" fill="#DFB8AC" opacity="0.08" />
 
     <!-- Reflection line -->
-    <rect x="150" y="275" width="150" height="8" rx="4" fill="#EEF2F5" />
+    <rect x="150" y="275" width="150" height="8" rx="4" fill="#1B1B22" />
   </g>
 </svg>
