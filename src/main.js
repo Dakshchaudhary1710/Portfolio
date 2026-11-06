@@ -46,7 +46,7 @@ const PORTFOLIO_DATA = {
   ],
   skillGroups: [
     {
-      category: "Languages",
+      category: "Programming",
       items: [
         {
           name: "C++",
@@ -238,10 +238,13 @@ function renderSkills() {
           <h2 class="section-title">My Skills</h2>
           <p class="section-subtitle">Core programming languages, web technologies, and computer science fundamentals.</p>
         </div>
-        <div class="skills-groups-wrapper">
+        <div class="skills-card">
           ${PORTFOLIO_DATA.skillGroups.map(group => `
-            <div class="skill-group-card">
-              <h3 class="skill-group-title">${group.category}</h3>
+            <div class="skill-row">
+              <div class="skill-row-header">
+                <span class="skill-category-name">${group.category}</span>
+                <span class="skill-colon">:</span>
+              </div>
               <div class="skill-items-container">
                 ${group.items.map(item => `
                   <div class="skill-item-badge">
