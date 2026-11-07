@@ -476,12 +476,16 @@ button, input, textarea {
    ABOUT SECTION
    ========================================================================== */
 .about-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   background-color: #060607;
 }
 
 .section-header {
   margin-bottom: 3.5rem;
+}
+
+.about-section-header {
+  margin-bottom: 2.2rem;
 }
 
 .section-title {
@@ -503,29 +507,48 @@ button, input, textarea {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
 .about-text {
-  font-size: 1.12rem;
-  color: #E2E2E6;
-  line-height: 1.8;
+  font-size: 1.08rem;
+  color: #C8C8D0;
+  line-height: 1.85;
+  max-width: 46ch;
+  letter-spacing: 0.01em;
+}
+
+.about-philosophy {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(223, 184, 172, 0.35);
+  line-height: 1.5;
 }
 
 .about-right img {
   width: 100%;
-  border-radius: 16px;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   transition: var(--transition);
-  background-color: #141416;
+  background-color: #0B0B10;
 }
 
 .about-right img:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(223, 184, 172, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.7);
+  border-color: rgba(223, 184, 172, 0.3);
 }
 
 .about-highlights {
@@ -1155,6 +1178,21 @@ textarea.form-control {
   .learning-statement {
     font-size: 1.8rem;
   }
+
+  /* About section: stack right below left on tablet */
+  .about-grid {
+    gap: 2.2rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-right {
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1188,6 +1226,14 @@ textarea.form-control {
 
   .about-highlights {
     grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-philosophy {
+    font-size: 1.05rem;
   }
 
   .footer-grid {

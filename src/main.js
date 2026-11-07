@@ -211,17 +211,18 @@ function renderAbout() {
   return `
     <section id="about" class="about-section">
       <div class="container">
-        <div class="section-header" style="margin-bottom: 0.8rem;">
+        <div class="section-header about-section-header">
           <h2 class="section-title">About Me</h2>
         </div>
         <div class="about-grid">
           <div class="about-left">
             <p class="about-text">
-              I like building things, solving problems, and learning how different technologies work together. I’m mainly focused on full-stack development and DSA with C++, and I’m currently exploring AI, machine learning, and generative AI. I enjoy taking an idea and turning it into something that actually works, while learning something new along the way.
+              I build software to understand how it works — from the interface down to the data layer. My focus is full-stack development and data structures &amp; algorithms, with C++ as my primary language for problem-solving. I work on projects that connect frontend, backend, and databases, and I explore where AI fits in without overreaching. I learn by building, not by collecting technologies.
             </p>
+            <p class="about-philosophy">Ideas are better when they work.</p>
           </div>
           <div class="about-right">
-            <img src="${aboutVisualSvg}" alt="Software Developer Workspace — Full-Stack & AI Exploration" />
+            <img src="${aboutVisualSvg}" alt="Software engineering workspace — full-stack development, DSA, and system architecture" />
           </div>
         </div>
       </div>
