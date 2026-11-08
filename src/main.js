@@ -216,6 +216,7 @@ function renderHero() {
       <div class="hero-bg-glow"></div>
       <div class="container hero-grid">
         <div class="hero-content">
+          <p class="hero-mono-label">Hi, my name is</p>
           <h1 class="hero-title">${PORTFOLIO_DATA.personal.name}</h1>
           <p class="hero-subtitle">${PORTFOLIO_DATA.personal.role}</p>
           <div class="hero-tagline-box">
@@ -226,7 +227,7 @@ function renderHero() {
               View Projects
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-           
+            <a href="#contact" class="btn-secondary">Get in touch</a>
           </div>
           <div class="hero-tech-strip">
             <p class="tech-strip-label">Core Technologies</p>
@@ -252,9 +253,10 @@ function renderHero() {
 /* Render About Me Section */
 function renderAbout() {
   return `
-    <section id="about" class="about-section">
+    <section id="about" class="about-section reveal">
       <div class="container">
         <div class="section-header about-section-header">
+          <span class="section-eyebrow">// About</span>
           <h2 class="section-title">About Me</h2>
         </div>
         <div class="about-grid">
@@ -276,9 +278,10 @@ function renderAbout() {
 /* Render Skills Section */
 function renderSkills() {
   return `
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section reveal">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">// Skills</span>
           <h2 class="section-title">My Skills</h2>
           <p class="section-subtitle">Core programming languages, web technologies, and computer science fundamentals.</p>
         </div>
@@ -309,9 +312,10 @@ function renderSkills() {
 function renderProjects() {
   const loomis = PORTFOLIO_DATA.projects[0];
   return `
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section reveal">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">// Projects</span>
           <h2 class="section-title">Featured Project</h2>
           <p class="section-subtitle">A practical software project designed and built for real-world placement preparation.</p>
         </div>
@@ -352,9 +356,10 @@ function renderProjects() {
 /* Render Certifications Section */
 function renderCertifications() {
   return `
-    <section id="certifications" class="certifications-section">
+    <section id="certifications" class="certifications-section reveal">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">// Certifications</span>
           <h2 class="section-title">Certifications</h2>
           <p class="section-subtitle">Verified credentials from industry-leading organizations.</p>
         </div>
@@ -396,9 +401,10 @@ function renderCertifications() {
 function renderEducation() {
   const edu = PORTFOLIO_DATA.education;
   return `
-    <section id="education" class="education-section">
+    <section id="education" class="education-section reveal">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">// Education</span>
           <h2 class="section-title">Education</h2>
           <p class="section-subtitle">Academic program and university background.</p>
         </div>
@@ -424,9 +430,10 @@ function renderEducation() {
 function renderCurrentlyLearning() {
   const learning = PORTFOLIO_DATA.currentlyLearning;
   return `
-    <section id="learning" class="learning-section">
+    <section id="learning" class="learning-section reveal">
       <div class="container">
         <div class="section-header">
+          <span class="section-eyebrow">// Learning</span>
           <h2 class="section-title">Currently Learning</h2>
           <p class="section-subtitle">Areas of study and technology I am currently exploring.</p>
         </div>
@@ -439,8 +446,8 @@ function renderCurrentlyLearning() {
           </h3>
           <div class="learning-topics">
             ${learning.topics.map(t => `
-              <span class="badge-tag" style="background-color: var(--color-white); border-color: var(--color-border); font-size: 0.85rem; padding: 0.4rem 0.9rem;">
-                <span style="width: 6px; height: 6px; background-color: var(--color-accent); border-radius: 50%; display: inline-block;"></span>
+              <span class="badge-tag">
+                <span style="width: 5px; height: 5px; background-color: var(--color-accent); border-radius: 50%; display: inline-block; flex-shrink: 0;"></span>
                 ${t}
               </span>
             `).join('')}
@@ -454,10 +461,11 @@ function renderCurrentlyLearning() {
 /* Render Contact Section */
 function renderContact() {
   return `
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section reveal">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-left">
+            <span class="section-eyebrow">// Contact</span>
             <h2 class="section-title">Let's Connect</h2>
             <p class="section-subtitle">
               Feel free to reach out regarding software projects, academic discussions, or tech collaborations.
@@ -511,7 +519,7 @@ function renderContact() {
       <!-- Wave transition -->
       <div class="wave-transition">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#060607"/>
+          <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#111827"/>
         </svg>
       </div>
     </section>
@@ -636,6 +644,23 @@ function attachEventListeners() {
       }
     });
   });
+
+  // Scroll-reveal: fade sections in as they enter the viewport
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+    );
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
 }
 
 /* Run App */
