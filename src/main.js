@@ -242,9 +242,7 @@ function renderHero() {
             </div>
           </div>
         </div>
-        <div class="hero-visual-wrapper">
-          <img src="${heroPortrait}" alt="Daksh Chaudhary" class="hero-portrait-img" />
-        </div>
+       
       </div>
     </section>
   `;

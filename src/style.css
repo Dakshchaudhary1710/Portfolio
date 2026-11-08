@@ -1492,13 +1492,13 @@ textarea.form-control {
   }
 
   .hero-portrait-img {
-    max-width: 300px;
-    height: 360px;
+    max-width: 2500px;
+    height: 200px;
   }
 
   .hero-visual-wrapper::after {
     width: 300px;
-    height: 360px;
+    height: 200px;
   }
 }
 
