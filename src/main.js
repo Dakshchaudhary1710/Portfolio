@@ -184,7 +184,7 @@ function renderNavbar() {
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#learning" class="nav-link">Currently Learning</a></li>
+
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <a href="#contact" class="btn-nav">Get in touch</a>
@@ -202,7 +202,7 @@ function renderNavbar() {
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#certifications" class="nav-link">Certifications</a>
       <a href="#education" class="nav-link">Education</a>
-      <a href="#learning" class="nav-link">Currently Learning</a>
+
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#contact" class="btn-primary" style="text-align: center;">Get in touch</a>
     </div>
