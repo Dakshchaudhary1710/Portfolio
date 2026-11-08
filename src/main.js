@@ -31,6 +31,47 @@ const PORTFOLIO_DATA = {
     statement: "Currently exploring Artificial Intelligence, Machine Learning, and Generative AI.",
     topics: ["Artificial Intelligence", "Machine Learning", "Generative AI"]
   },
+  certifications: [
+    {
+      id: "meta-fullstack",
+      title: "Meta Full Stack Developer",
+      subtitle: "Front-End & Back-End from Scratch",
+      issuer: "Meta",
+      issuedVia: "Coursera",
+      date: "Aug 2026",
+      credentialUrl: "https://coursera.org/verify/specialization/KFN4IT50MG0J",
+      logo: `<svg viewBox="0 0 60 24" width="60" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 6C4.5 6 2 8.5 2 12C2 15.5 4.5 18 4.5 18" stroke="#0082FB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.5 6C4.5 6 7 3.5 10 3.5C13 3.5 15.5 6 15.5 6L20 12L15.5 18C15.5 18 13 20.5 10 20.5C7 20.5 4.5 18 4.5 18" stroke="#0082FB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 12L28 12M28 6L28 18" stroke="#0082FB" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="32" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#0082FB" letter-spacing="-0.3">Meta</text>
+      </svg>`
+    },
+    {
+      id: "oracle-sql",
+      title: "Oracle SQL",
+      subtitle: "Database Foundations & Querying",
+      issuer: "Oracle",
+      issuedVia: null,
+      date: null,
+      credentialUrl: "/SQL-DakshChaudhary-oracle.pdf",
+      logo: `<svg viewBox="0 0 72 24" width="72" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" fill="#C74634" letter-spacing="-0.2">Oracle</text>
+      </svg>`
+    },
+    {
+      id: "oracle-plsql",
+      title: "PL/SQL",
+      subtitle: "Procedural Language for SQL",
+      issuer: "Oracle",
+      issuedVia: null,
+      date: null,
+      credentialUrl: "/Plsql-DakshChaudhary.pdf",
+      logo: `<svg viewBox="0 0 72 24" width="72" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" fill="#C74634" letter-spacing="-0.2">Oracle</text>
+      </svg>`
+    }
+  ],
   projects: [
     {
       id: "loomis",
@@ -141,6 +182,7 @@ function renderNavbar() {
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#learning" class="nav-link">Currently Learning</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -158,6 +200,7 @@ function renderNavbar() {
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
       <a href="#education" class="nav-link">Education</a>
       <a href="#learning" class="nav-link">Currently Learning</a>
       <a href="#contact" class="nav-link">Contact</a>
@@ -300,6 +343,49 @@ function renderProjects() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* Render Certifications Section */
+function renderCertifications() {
+  return `
+    <section id="certifications" class="certifications-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Verified credentials from industry-leading organizations.</p>
+        </div>
+        <div class="certifications-grid">
+          ${PORTFOLIO_DATA.certifications.map(cert => `
+            <div class="cert-card">
+              <div class="cert-card-inner">
+                <div class="cert-logo-row">
+                  <div class="cert-logo">${cert.logo}</div>
+                  ${cert.date ? `<span class="cert-date">${cert.date}</span>` : ''}
+                </div>
+                <div class="cert-body">
+                  <h3 class="cert-title">${cert.title}</h3>
+                  <p class="cert-subtitle-text">${cert.subtitle}</p>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">${cert.issuer}${cert.issuedVia ? ` <span class="cert-via">via ${cert.issuedVia}</span>` : ''}</span>
+                  </div>
+                </div>
+                <div class="cert-footer">
+                  <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-link">
+                    View Certificate
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `).join('')}
         </div>
       </div>
     </section>
@@ -477,6 +563,7 @@ function initApp() {
       ${renderAbout()}
       ${renderSkills()}
       ${renderProjects()}
+      ${renderCertifications()}
       ${renderEducation()}
 
       ${renderContact()}
