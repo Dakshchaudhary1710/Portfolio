@@ -1,5 +1,4 @@
 import './style.css';
-import heroPortrait from './assets/hero-portrait.jpg';
 import aboutVisualSvg from './assets/about-visual.svg';
 import loomisScreenshot from './assets/loomis-screenshot.png';
 
@@ -169,10 +168,13 @@ const PORTFOLIO_DATA = {
   ]
 };
 
+/* Shared icons */
+const ARROW_RIGHT_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`;
+
 /* Render Navbar */
 function renderNavbar() {
   return `
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
       <div class="container navbar-container">
         <a href="#home" class="brand-logo">
           Daksh<span class="dot"></span>
@@ -184,11 +186,10 @@ function renderNavbar() {
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
-
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <a href="#contact" class="btn-nav">Get in touch</a>
-        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation">
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mobile-drawer">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
@@ -202,9 +203,47 @@ function renderNavbar() {
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#certifications" class="nav-link">Certifications</a>
       <a href="#education" class="nav-link">Education</a>
-
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#contact" class="btn-primary" style="text-align: center;">Get in touch</a>
+    </div>
+  `;
+}
+
+/* Hero code window — built from PORTFOLIO_DATA so it never drifts from the rest of the site */
+function renderHeroCodeWindow() {
+  const p = PORTFOLIO_DATA.personal;
+  const key = (v) => `<span class="tok-key">${v}</span>`;
+  const str = (v) => `<span class="tok-str">"${v}"</span>`;
+  const com = (v) => `<span class="tok-com">${v}</span>`;
+  const kw = (v) => `<span class="tok-kw">${v}</span>`;
+
+  const lines = [
+    com('// who.ts'),
+    `${kw('const')} developer = {`,
+    `  ${key('name')}: ${str(p.name)},`,
+    `  ${key('role')}: ${str(p.role)},`,
+    `  ${key('education')}: ${str('B.Tech CSE, ' + p.university)},`,
+    `  ${key('stack')}: [${['React', 'Django', 'MySQL', 'C++'].map(str).join(', ')}],`,
+    `  ${key('shipped')}: ${str('Loomis — placement prep platform')},`,
+    `  ${key('exploring')}: [${['AI', 'ML', 'GenAI'].map(str).join(', ')}],`,
+    `  ${key('principle')}: ${str('Ideas are better when they work.')},`,
+    `};`
+  ];
+
+  return `
+    <div class="code-window" role="img" aria-label="Code snippet summarising ${p.name}: ${p.role}, studying at ${p.university}, building Loomis, and exploring AI and machine learning.">
+      <div class="code-window-bar" aria-hidden="true">
+        <span class="code-dots"><i></i><i></i><i></i></span>
+        <span class="code-filename">who.ts</span>
+      </div>
+      <pre class="code-body" aria-hidden="true"><code>${lines
+        .map((l, i) => `<span class="code-line"><span class="code-ln">${i + 1}</span>${l}</span>`)
+        .join('')}</code></pre>
+      <div class="code-window-status" aria-hidden="true">
+        <span>TypeScript</span>
+        <span>UTF-8</span>
+        <span>${p.location}</span>
+      </div>
     </div>
   `;
 }
@@ -225,24 +264,26 @@ function renderHero() {
           <div class="hero-actions">
             <a href="#projects" class="btn-primary">
               View Projects
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              ${ARROW_RIGHT_ICON}
             </a>
             <a href="#contact" class="btn-secondary">Get in touch</a>
           </div>
           <div class="hero-tech-strip">
             <p class="tech-strip-label">Core Technologies</p>
-            <div class="tech-strip-icons">
-              <div class="tech-icon-item">React</div>
-              <div class="tech-icon-item">JavaScript</div>
-              <div class="tech-icon-item">Python</div>
-              <div class="tech-icon-item">C++</div>
-              <div class="tech-icon-item">Java</div>
-              <div class="tech-icon-item">Django</div>
-              <div class="tech-icon-item">SQL</div>
-            </div>
+            <ul class="tech-strip-icons">
+              <li class="tech-icon-item">React</li>
+              <li class="tech-icon-item">JavaScript</li>
+              <li class="tech-icon-item">Python</li>
+              <li class="tech-icon-item">C++</li>
+              <li class="tech-icon-item">Java</li>
+              <li class="tech-icon-item">Django</li>
+              <li class="tech-icon-item">SQL</li>
+            </ul>
           </div>
         </div>
-       
+        <div class="hero-visual">
+          ${renderHeroCodeWindow()}
+        </div>
       </div>
     </section>
   `;
@@ -265,7 +306,7 @@ function renderAbout() {
             <p class="about-philosophy">Ideas are better when they work.</p>
           </div>
           <div class="about-right">
-            <img src="${aboutVisualSvg}" alt="Software engineering workspace — full-stack development, DSA, and system architecture" />
+            <img src="${aboutVisualSvg}" alt="Software engineering workspace — full-stack development, DSA, and system architecture" loading="lazy" />
           </div>
         </div>
       </div>
@@ -319,9 +360,9 @@ function renderProjects() {
         </div>
 
         <div class="projects-featured-container">
-          <div class="project-card featured" style="grid-column: auto;">
+          <div class="project-card featured">
             <div class="project-image-box">
-              <img src="${loomis.image}" alt="${loomis.title}" />
+              <img src="${loomis.image}" alt="${loomis.title}" loading="lazy" />
             </div>
             <div class="project-content">
               <div>
@@ -335,12 +376,12 @@ function renderProjects() {
               <div class="project-footer">
                 <a href="${loomis.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
                   View Project
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  ${ARROW_RIGHT_ICON}
                 </a>
                 <a href="${loomis.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   GitHub Repository
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  ${ARROW_RIGHT_ICON}
                 </a>
               </div>
             </div>
@@ -379,7 +420,7 @@ function renderCertifications() {
                 <div class="cert-footer">
                   <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-link">
                     View Certificate
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
@@ -414,7 +455,7 @@ function renderEducation() {
               <div class="education-institution">${edu.institution}</div>
             </div>
             <div class="education-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
           </div>
           <p class="education-details">${edu.details}</p>
@@ -424,7 +465,7 @@ function renderEducation() {
   `;
 }
 
-/* Render Currently Learning Section */
+/* Render Currently Learning Section (defined but not mounted, same as before) */
 function renderCurrentlyLearning() {
   const learning = PORTFOLIO_DATA.currentlyLearning;
   return `
@@ -471,7 +512,7 @@ function renderContact() {
             <div class="contact-info-list">
               <div class="contact-info-item">
                 <div class="contact-info-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
                 <div>
                   <div class="contact-info-label">Email</div>
@@ -480,7 +521,7 @@ function renderContact() {
               </div>
               <div class="contact-info-item">
                 <div class="contact-info-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
                   <div class="contact-info-label">Location</div>
@@ -506,16 +547,16 @@ function renderContact() {
                 </div>
                 <button type="submit" class="btn-primary" style="width: 100%;">
                   Send Message
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Wave transition -->
-      <div class="wave-transition">
+      <div class="wave-transition" aria-hidden="true">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="#111827"/>
         </svg>
@@ -535,10 +576,10 @@ function renderFooter() {
             <div class="footer-tagline">Manipal University Jaipur • B.Tech Computer Science</div>
           </div>
           <div class="footer-socials">
-            <a href="${PORTFOLIO_DATA.personal.github}" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub">
+            <a href="${PORTFOLIO_DATA.personal.github}" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             </a>
-            <a href="${PORTFOLIO_DATA.personal.linkedin}" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+            <a href="${PORTFOLIO_DATA.personal.linkedin}" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
             <a href="mailto:${PORTFOLIO_DATA.personal.email}" class="social-icon-link" aria-label="Email">
@@ -552,8 +593,8 @@ function renderFooter() {
         </div>
       </div>
     </footer>
-    <div class="toast-notification" id="toast-notification">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
       <span id="toast-message">Message sent successfully!</span>
     </div>
   `;
@@ -571,7 +612,6 @@ function initApp() {
       ${renderProjects()}
       ${renderCertifications()}
       ${renderEducation()}
-
       ${renderContact()}
     </main>
     ${renderFooter()}
@@ -587,12 +627,14 @@ function attachEventListeners() {
   const drawer = document.querySelector('#mobile-drawer');
   if (toggleBtn && drawer) {
     toggleBtn.addEventListener('click', () => {
-      drawer.classList.toggle('open');
+      const isOpen = drawer.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
     drawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         drawer.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -617,31 +659,35 @@ function attachEventListeners() {
     });
   }
 
-  // Navigation Active State Update on Scroll
+  // Navigation active state on scroll (throttled with rAF)
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
+  let ticking = false;
 
-  window.addEventListener('scroll', () => {
+  function updateActiveLink() {
     let current = '';
     const scrollY = window.pageYOffset;
 
     sections.forEach(section => {
-      const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 120;
-      const sectionId = section.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        current = sectionId;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      if (scrollY > sectionTop && scrollY <= sectionBottom) {
+        current = section.getAttribute('id');
       }
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
+      link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
-  });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateActiveLink);
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Scroll-reveal: fade sections in as they enter the viewport
   const revealEls = document.querySelectorAll('.reveal');
