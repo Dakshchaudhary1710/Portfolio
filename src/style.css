@@ -623,7 +623,7 @@ button, input, textarea {
 
 .code-body code {
   display: block;
-  width: max-content;
+  width: 450px;
   min-width: 100%;
   font-family: inherit;
 }
