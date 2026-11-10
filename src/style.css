@@ -499,6 +499,7 @@ button, input, textarea {
   border-left: 3px solid var(--color-accent);
   border-radius: 0 8px 8px 0;
   animation: heroFadeUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+  box-shadow: inset 3px 0 12px rgba(100, 255, 218, 0.05);
 }
 
 .hero-tagline {
@@ -561,6 +562,8 @@ button, input, textarea {
   border-color: var(--color-accent);
   color: var(--color-accent);
   background-color: var(--color-accent-dim);
+  border-left-color: var(--color-accent);
+  box-shadow: inset 2px 0 0 var(--color-accent);
 }
 
 /* ── 8b. HERO CODE WINDOW ────────────────────────────────────────────── */
