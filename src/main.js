@@ -217,35 +217,7 @@ function renderHeroCodeWindow() {
   const com = (v) => `<span class="tok-com">${v}</span>`;
   const kw = (v) => `<span class="tok-kw">${v}</span>`;
 
-  const lines = [
-    com('// who.ts'),
-    `${kw('const')} developer = {`,
-    `  ${key('name')}: ${str(p.name)},`,
-    `  ${key('role')}: ${str(p.role)},`,
-    `  ${key('education')}: ${str('B.Tech CSE, ' + p.university)},`,
-    `  ${key('stack')}: [${['React', 'Django', 'MySQL', 'C++'].map(str).join(', ')}],`,
-    `  ${key('shipped')}: ${str('Loomis — placement prep platform')},`,
-    `  ${key('exploring')}: [${['AI', 'ML', 'GenAI'].map(str).join(', ')}],`,
-    `  ${key('principle')}: ${str('Ideas are better when they work.')},`,
-    `};`
-  ];
-
-  return `
-    <div class="code-window" role="img" aria-label="Code snippet summarising ${p.name}: ${p.role}, studying at ${p.university}, building Loomis, and exploring AI and machine learning.">
-      <div class="code-window-bar" aria-hidden="true">
-        <span class="code-dots"><i></i><i></i><i></i></span>
-        <span class="code-filename">who.ts</span>
-      </div>
-      <pre class="code-body" aria-hidden="true"><code>${lines
-        .map((l, i) => `<span class="code-line"><span class="code-ln">${i + 1}</span>${l}</span>`)
-        .join('')}</code></pre>
-      <div class="code-window-status" aria-hidden="true">
-        <span>TypeScript</span>
-        <span>UTF-8</span>
-        <span>${p.location}</span>
-      </div>
-    </div>
-  `;
+  
 }
 
 /* Render Hero Section */
@@ -282,7 +254,7 @@ function renderHero() {
           </div>
         </div>
         <div class="hero-visual">
-          ${renderHeroCodeWindow()}
+
         </div>
       </div>
     </section>
