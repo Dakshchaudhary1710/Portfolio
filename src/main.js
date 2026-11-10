@@ -253,8 +253,72 @@ function renderHero() {
             </ul>
           </div>
         </div>
-        <div class="hero-visual">
-
+        <div class="hero-visual" aria-hidden="true">
+          <div class="tech-float-scene">
+            <!-- Light dot grid background -->
+            <svg class="tech-float-grid" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <pattern id="dotgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="rgba(100,255,218,0.07)"/>
+              </pattern>
+              <rect width="400" height="400" fill="url(#dotgrid)"/>
+            </svg>
+            <!-- Connecting lines SVG -->
+            <svg class="tech-float-lines" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="200" y1="130" x2="310" y2="200" stroke="rgba(100,255,218,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="200" y1="130" x2="90" y2="210" stroke="rgba(100,255,218,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="200" y1="130" x2="200" y2="300" stroke="rgba(100,255,218,0.07)" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="310" y1="200" x2="260" y2="310" stroke="rgba(100,255,218,0.07)" stroke-width="1" stroke-dasharray="4 4"/>
+            </svg>
+            <!-- React — large, top center -->
+            <div class="tech-card tech-card--lg float-a" style="top:4%;left:38%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.5" transform="rotate(150 12 12)"/></svg>
+              </div>
+              <span class="tech-card-name">React</span>
+            </div>
+            <!-- JavaScript — medium, right upper -->
+            <div class="tech-card tech-card--md float-b" style="top:22%;right:4%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><text x="12" y="17" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle" fill="#000">JS</text></svg>
+              </div>
+              <span class="tech-card-name">JavaScript</span>
+            </div>
+            <!-- Python — large, left center -->
+            <div class="tech-card tech-card--lg float-c" style="top:36%;left:2%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#3776AB" d="M11.9 2c-4.8 0-4.5 2.1-4.5 2.1v2.2h4.6v.7H5.6S2 6.5 2 11.3c0 4.8 3.1 4.6 3.1 4.6h1.8v-2.6s-.1-3.1 3.1-3.1h4.4s2.9.1 2.9-2.8V4.8S17.8 2 11.9 2zm-2.4 1.5c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/><path fill="#FFD43B" d="M12.1 22c4.8 0 4.5-2.1 4.5-2.1v-2.2h-4.6v-.7h6.4s3.6.5 3.6-4.3c0-4.8-3.1-4.6-3.1-4.6h-1.8v2.6s.1 3.1-3.1 3.1h-4.4s-2.9-.1-2.9 2.8v2.6s-.4 2.8 5.4 2.8zm2.4-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg>
+              </div>
+              <span class="tech-card-name">Python</span>
+            </div>
+            <!-- Django — medium, right lower -->
+            <div class="tech-card tech-card--md float-a" style="top:52%;right:6%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22"><rect width="24" height="24" rx="4" fill="#092E20"/><text x="12" y="17" font-size="14" font-family="serif" font-weight="bold" text-anchor="middle" fill="#44B78B">d</text></svg>
+              </div>
+              <span class="tech-card-name">Django</span>
+            </div>
+            <!-- C++ — small, top right -->
+            <div class="tech-card tech-card--sm float-b" style="top:8%;right:10%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#00599C" d="M12 2L2 7v10l10 5 10-5V7L12 2zm-1 14.5c-2.5 0-4.5-1.8-4.5-4.5s2-4.5 4.5-4.5c1.4 0 2.6.6 3.4 1.6l-1.5 1.2c-.4-.6-1.1-1-1.9-1-1.5 0-2.6 1.2-2.6 2.7s1.1 2.7 2.6 2.7c.8 0 1.5-.4 1.9-1l1.5 1.2c-.8 1-2 1.6-3.4 1.6zm7-3.5h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1zm3 0h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1z"/></svg>
+              </div>
+              <span class="tech-card-name">C++</span>
+            </div>
+            <!-- Java — small, bottom left -->
+            <div class="tech-card tech-card--sm float-c" style="bottom:14%;left:14%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#5382A1" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <span class="tech-card-name">Java</span>
+            </div>
+            <!-- SQL — small, bottom center -->
+            <div class="tech-card tech-card--sm float-a" style="bottom:6%;left:42%;">
+              <div class="tech-card-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <span class="tech-card-name">SQL</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -660,6 +724,16 @@ function attachEventListeners() {
       ticking = true;
     }
   }, { passive: true });
+
+  // Navbar scrolled state
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const onNavScroll = () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    };
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+    onNavScroll();
+  }
 
   // Scroll-reveal: fade sections in as they enter the viewport
   const revealEls = document.querySelectorAll('.reveal');
